@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "categories",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
-    "displayName": "Blog",
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
     "description": ""
   },
   "options": {
@@ -15,14 +15,11 @@
     "Title": {
       "type": "string"
     },
-    "Description": {
-      "type": "string"
-    },
-    "categories": {
+    "blogs": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::category.category",
-      "mappedBy": "blogs"
+      "target": "api::blog.blog",
+      "inversedBy": "categories"
     }
   }
 }
